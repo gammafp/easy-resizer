@@ -1,0 +1,48 @@
+.canvas-tool-container {
+    display: inline-block;
+    width: 100%;
+    // Se calcula -40px por el menú
+    height: calc(100vh - 40px);
+    outline: 1px solid red;
+    .canvas-panel {
+        height: calc(100% - 50px);
+    }
+    .tools-panel {
+        height: 50px;
+        background-color: var(--main-bg-menu);
+        .zoom-input-view {
+            input {
+                width: 40px;
+                outline: none;
+                border: none;
+                border-radius: 3px;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.color-panel {
+    display: inline-block;
+    width: 100%;
+    .title {
+        color: var(--main-light);
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    
+    .input-scale {
+        outline: none;
+        border: none;
+        text-align: right;
+        border-radius: 3px;
+        font-size: 1.5rem;
+    }
+
+    .color-from {
+        height: calc(80% - 40px);
+    }
+    .color-to {
+        border-top: 4px solid var(--main-bg-menu);
+    }
+}

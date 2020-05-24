@@ -1,0 +1,50 @@
+/**
+Archivo para los estilos globales.
+*/
+@import './styles/splitpanel';
+@import './styles/fonts';
+@import './styles/colors';
+@import './styles/debug';
+
+body {
+    touch-action: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+// Agrega imágenes con definición
+img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.text-color-primary {
+    color: var(--main-primary);
+}
+
+.hiden_input_spin {
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0px;
+        -moz-appearance: textfield;
+    }
+}
+
+body {
+    background-color: var(--main-bg);
+    overflow: hidden;
+}
+
+.principal-container {
+    width: 100%;
+    height: 100vh;
+}

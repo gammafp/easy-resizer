@@ -1,0 +1,40 @@
+// Split panel css
+.Resizer {
+    width: 100%;
+    background: var(--main-bg-menu);
+    z-index: 1;
+    box-sizing: content-box;
+    background-clip: padding-box;
+}
+
+.Resizer:hover {
+    transition: all 1s ease;
+}
+
+.Resizer.vertical {
+    width: 5px;
+    cursor: col-resize;
+}
+
+.Resizer:hover,
+.Resizer.horizontal.resizing,
+.Resizer.vertical.resizing {
+    background-color: rgba(white, 0.1);
+}
+
+.DragLayer {
+    z-index: 1;
+    pointer-events: none;
+}
+
+.DragLayer.resizing {
+    pointer-events: auto;
+}
+
+.DragLayer.horizontal {
+    cursor: row-resize;
+}
+
+.DragLayer.vertical {
+    cursor: col-resize;
+}
