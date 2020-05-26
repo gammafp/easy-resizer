@@ -5,11 +5,13 @@ import EasyResizer from './components/EasyResizer';
 import store from './State/store';
 
 import './Vendor/styles/bootstrap-utilities.min.css';
+import ToastNotification from './components/notifications/ToastNotification';
 
 function App() {
   return (
 		<Provider store={store}>
 			<EasyResizer />
+			<ToastNotification />
 		</Provider>
   );
 }

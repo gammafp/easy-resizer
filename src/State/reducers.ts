@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
 import zoomReducer from './zoom';
-import fromColorsReducer from './fromColors';
-import toColorsReducer from './toColors';
+import images from './images';
 
 export const rootReducer = combineReducers({
     zoom: zoomReducer,
-    fromColors: fromColorsReducer,
-    toColors: toColorsReducer
+    images,
 });

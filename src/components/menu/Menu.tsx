@@ -1,19 +1,19 @@
 import React from 'react';
-import { useDispatch, connect } from 'react-redux';
-
-// Redux
-import { resetAllAction } from '../../State/global.actions';
-import { AppDispatch, AppState } from '../../State/store';
-import { setZoomAction, selectZoomLevel } from '../../State/zoom';
+import { ImagesType, setImages } from '../../State/images';
 
 // Estilos
 import './Menu.style.scss';
+import ImportButton from './ImportButton.component';
+import { useDispatch } from 'react-redux';
 
-type Props = { zoom: number };
-
-const MenuComponent: React.FunctionComponent<Props> = ({ zoom }) => {
-    const dispatch = useDispatch<AppDispatch>();
+const MenuComponent: React.FunctionComponent = () => {
     
+    const dispatch = useDispatch();
+
+    const receiveImages = (images: ImagesType) => {
+        dispatch(setImages(images));
+    }
+
     return (
         <nav className="menu noselect">
             <ul>
@@ -22,13 +22,13 @@ const MenuComponent: React.FunctionComponent<Props> = ({ zoom }) => {
                         home
                     </a>
                 </li>
-                <li onClick={() => {
-                    dispatch(setZoomAction(Math.random() * 100));
-                }}>
+                <ImportButton
+                    loadImages={receiveImages}
+                    multiple={true}
+                >
                     Import
-                </li>
+                </ImportButton>
                 <li onClick={() => {
-                    dispatch(resetAllAction());
                 }}>
                     Reset
                 </li>
@@ -37,8 +37,4 @@ const MenuComponent: React.FunctionComponent<Props> = ({ zoom }) => {
     );
 };
 
-const mapStateToProps = (state: AppState) => ({
-    zoom: selectZoomLevel(state)
-});
-
-export default connect(mapStateToProps)(MenuComponent);
+export default MenuComponent;
