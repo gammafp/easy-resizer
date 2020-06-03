@@ -3,12 +3,328 @@ import MenuComponent from './menu/Menu';
 import { SplitPane } from 'react-multi-split-pane';
 import './EasyResizer.scss';
 import { AddButton } from './buttons/Buttons';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+
+// Import imagen
+import uno from '../assets/test/uno.jpg';
 
 const SwapPalette = () => {
     return (
         <div className="principal-container">
             <MenuComponent />
-            <SplitPane
+            <div className="image-container--scroll">
+                <PerfectScrollbar >
+                    <div className="images-container">
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    8a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a56058a25281b2793a16c2054f1a6d53a5605.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                        <div className="image-container">
+                            <div className="figure">
+                                <img src={uno} alt="Imagen Muestra" />
+                                <figcaption>
+                                    FINAL.jpg
+                        </figcaption>
+                            </div>
+                        </div>
+
+                    </div>
+                </PerfectScrollbar>
+            </div>
+
+            <div className="tools d-flex justify-content-center">
+                <div className="d-flex justify-content-between align-items-center tools-container">
+                    <div className="ml-5">
+                        <span className="scale-text">
+                            Scale:&nbsp;
+                        </span>
+                        <input type="number" defaultValue="1" min="0" max="20" className="input-scale" />
+                    </div>
+                    <div className="mr-5">
+                        <AddButton className="p-2" style={{ fontSize: '1.3rem' }}>Re-scale</AddButton>
+                    </div>
+                </div>
+            </div>
+            {/* <SplitPane
                 split="vertical"
                 className="panels-container"
                 defaultSizes={[20, 60, 20]}
@@ -35,7 +351,7 @@ const SwapPalette = () => {
                         </div>
                     </div>
                 </div>
-            </SplitPane>
+            </SplitPane> */}
         </div>
     )
 }

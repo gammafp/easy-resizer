@@ -1,48 +1,87 @@
-.canvas-tool-container {
-    display: inline-block;
-    width: 100%;
-    // Se calcula -40px por el menú
-    height: calc(100vh - 40px);
-    outline: 1px solid red;
-    .canvas-panel {
-        height: calc(100% - 50px);
-    }
-    .tools-panel {
-        height: 50px;
-        background-color: var(--main-bg-menu);
-        .zoom-input-view {
-            input {
-                width: 40px;
-                outline: none;
-                border: none;
-                border-radius: 3px;
-                text-align: right;
+// TODO: Cuarentena borrar.
+// .canvas-tool-container {
+//     display: inline-block;
+//     width: 100%;
+//     // Se calcula -40px por el menú
+//     height: calc(100vh - 40px);
+//     outline: 1px solid red;
+//     .canvas-panel {
+//         height: calc(100% - 50px);
+//     }
+//     .tools-panel {
+//         height: 50px;
+//         background-color: var(--main-bg-menu);
+//         .zoom-input-view {
+//             input {
+//                 width: 40px;
+//                 outline: none;
+//                 border: none;
+//                 border-radius: 3px;
+//                 text-align: right;
+//             }
+//         }
+//     }
+// }
+.image-container--scroll {
+    height: calc(100vh - 100px);
+    overflow: hidden;
+}
+.images-container {
+    margin: 0 auto;
+    width: 90%;
+    overflow: hidden;
+    align-content: start;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+
+    .image-container {
+        // Esto hay que remover
+        display: inline-block;
+
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        padding: 0px;
+        text-overflow: ellipsis;
+        // outline: 1px solid red;
+        .figure {
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            margin: 0px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            &:hover {
+                background-color: var(--main-bg-menu-hover);
+            }
+            img {
+                width: 100%;
+                box-shadow: 2px 2px 5px black;
+            }
+            figcaption {
+                text-align: center;
+                overflow-wrap: break-word;
+                width: 100%;
+                color: var(--main-light);
             }
         }
     }
 }
-
-.color-panel {
-    display: inline-block;
-    width: 100%;
-    .title {
+.tools {
+    background-color: var(--main-bg-menu);
+    .tools-container {
+        width: 80%;
+        height: 60px;
+    }
+    .scale-text {
         color: var(--main-light);
-        margin-left: 10px;
-        margin-top: 10px;
+        font-size: 1.3rem;
     }
-    
     .input-scale {
-        outline: none;
-        border: none;
+        font-size: 1.4rem;
         text-align: right;
+        border: none;
         border-radius: 3px;
-        font-size: 1.5rem;
-    }
-
-    .color-from {
-        height: calc(80% - 40px);
-    }
-    .color-to {
-        border-top: 4px solid var(--main-bg-menu);
     }
 }
