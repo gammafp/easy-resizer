@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImagesType, setImages } from '../../State/images';
+import { ImagesType, setImages, resetImages } from '../../State/images';
 
 // Estilos
 import './Menu.style.scss';
@@ -29,6 +29,7 @@ const MenuComponent: React.FunctionComponent = () => {
                     Import
                 </ImportButton>
                 <li onClick={() => {
+                    dispatch(resetImages());
                 }}>
                     Reset
                 </li>

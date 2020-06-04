@@ -25,27 +25,29 @@
 .image-container--scroll {
     height: calc(100vh - 100px);
     overflow: hidden;
+
 }
 .images-container {
     margin: 0 auto;
     width: 90%;
     overflow: hidden;
-    align-content: start;
     display: flex;
+    align-content: flex-start;
     flex-wrap: wrap;
     padding-top: 20px;
-
     .image-container {
         // Esto hay que remover
         display: inline-block;
-
         width: 200px;
-        height: 200px;
+        height: 250px;
         overflow: hidden;
         padding: 0px;
         text-overflow: ellipsis;
         // outline: 1px solid red;
         .figure {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             width: calc(100% - 20px);
             height: calc(100% - 20px);
             margin: 0px;
@@ -57,12 +59,15 @@
             }
             img {
                 width: 100%;
+                max-height: 200px;
                 box-shadow: 2px 2px 5px black;
             }
             figcaption {
                 text-align: center;
+                text-overflow: ellipsis;
                 overflow-wrap: break-word;
                 width: 100%;
+                max-height: 35px;
                 color: var(--main-light);
             }
         }

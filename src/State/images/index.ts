@@ -18,7 +18,9 @@ const images = createSlice({
     name: 'images',
     initialState,
     reducers: {
-        setImages: (state, action: PayloadAction<ImagesType>) => action.payload,
+        setImages: (state, action: PayloadAction<ImagesType>) => {
+            return [...state, ...action.payload];
+        },
         // Local reset (only for zoom)
         resetImages: () => initialState,
     },
