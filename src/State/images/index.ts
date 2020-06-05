@@ -12,6 +12,10 @@ export type ImagesType = Array<{
     active: boolean
 }>;
 
+export type ImagesDeleteType = {
+    id: string
+};
+
 const initialState: ImagesType = defaultImages;
 
 const images = createSlice({
@@ -21,6 +25,9 @@ const images = createSlice({
         setImages: (state, action: PayloadAction<ImagesType>) => {
             return [...state, ...action.payload];
         },
+        deleteImage: (state, action: PayloadAction<ImagesDeleteType>) => {
+            return state.filter((image) => action.payload.id !== image.id);
+        },
         // Local reset (only for zoom)
         resetImages: () => initialState,
     },
@@ -29,5 +36,5 @@ const images = createSlice({
     },
 });
 
-export const { setImages, resetImages } = images.actions;
+export const { setImages, resetImages, deleteImage} = images.actions;
 export default images.reducer;

@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import './DragDropFiles.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppState } from '../../State/store';
+import getImageFiles from '../../utils/getImages';
+import { setImages, ImagesType } from '../../State/images';
 
 const DragDropFiles = (props: any) => {
     const dragBox = useRef<HTMLDivElement>(null);
@@ -17,7 +19,11 @@ const DragDropFiles = (props: any) => {
     };
     const handleDrop = async (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
+        const files = event.dataTransfer.files;
+        const images = await getImageFiles(files) as ImagesType;
+        dispatch(setImages(images));
         dragBox.current?.classList.remove('drag-drop-box-over');
+        console.log(event);
     };
 
     return (

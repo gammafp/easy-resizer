@@ -4,18 +4,36 @@ import './EasyResizer.scss';
 import { AddButton } from './buttons/Buttons';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
+import 'animate.css';
 
 // Import imagen
-import uno from '../assets/test/uno.jpg';
-import { AppState } from '../State/store';
-import { useSelector } from 'react-redux';
+import store, { AppState } from '../State/store';
+import { useSelector, useDispatch } from 'react-redux';
 import DragDropFiles from './dragDropFiles/DragDropFiles';
+import { activateContextMenu, closeContextMenu } from '../State/contextMenu';
 
 const SwapPalette = () => {
     const images = useSelector((state: AppState) => state.images);
-    console.log(images);
+    const dispatch = useDispatch();
+    const contextMenuHandle = (event: React.MouseEvent<HTMLDivElement, MouseEvent>, id: string) => {
+        dispatch(
+            activateContextMenu({
+                id,
+                x: event.clientX,
+                y: event.clientY,
+                active: true
+            })
+        );
+    }
+
+    const clickHandle = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        if (store.getState().contextMenu.active) {
+            dispatch(closeContextMenu());
+        }
+    }
+
     return (
-        <div className="principal-container">
+        <div className="principal-container" onContextMenu={(event) => event.preventDefault()} onClickCapture={(event) => clickHandle(event)}>
             <MenuComponent />
             <DragDropFiles>
                 <div className="image-container--scroll">
@@ -24,12 +42,12 @@ const SwapPalette = () => {
                             {
                                 images.map((image) => {
                                     return (
-                                        <div className="image-container" key={image.id}>
+                                        <div className="image-container animated" key={image.id} id={`id_${image.id}`} onContextMenu={(event) => contextMenuHandle(event, image.id)}>
                                             <div className="figure">
                                                 <img src={image.src} alt="Imagen Muestra" />
                                                 <figcaption>
-                                                    asdfijasdpfijaospdfijaposdfijasopdfjiaopdjfsioapsdjfioajsdfioapsdofijaspdofijaopsdfjopasdifjopasdifjopasdifjoipasfjopasidjfopasidjfopdisfjpoasdifjpoaisdfjopasdijfopasidfjopaisdjfopaisjdfpoasdifjpaosdifjpoasdifjpoasidfpoasdifjpoasdifjpoasdifjklasdfjlkñasfjklasdñfjklasfjlas Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam similique iusto praesentium blanditiis ipsa dignissimos quos reiciendis nulla laboriosam aperiam dicta aliquid laudantium accusamus, totam perspiciatis, sint cupiditate harum molestias.
-                                            </figcaption>
+                                                    {image.name}
+                                                </figcaption>
                                             </div>
                                         </div>
                                     );
@@ -53,34 +71,6 @@ const SwapPalette = () => {
                     </div>
                 </div>
             </div>
-            {/* <SplitPane
-                split="vertical"
-                className="panels-container"
-                defaultSizes={[20, 60, 20]}
-                minSize={[200, 500, 200]}
-            >
-                <div className="images-panel">
-
-                </div>
-                <div className="canvas-tool-container d-block">
-                    <div className="canvas-panel">Arriba</div>
-                </div>
-                <div className="color-panel">
-                    <div className="color-from">
-                        <h4 className="title">
-                            Scale:
-                        </h4>
-                        <div className="d-flex justify-content-center">
-                            <input type="number" defaultValue="0" min="0" max="20" className="input-scale" />
-                        </div>
-                    </div>
-                    <div className="color-to">
-                        <div className="d-flex justify-content-center">
-                            <AddButton className="mt-4 p-2" style={{ fontSize: '1.3rem' }}>Re-scale</AddButton>
-                        </div>
-                    </div>
-                </div>
-            </SplitPane> */}
         </div>
     )
 }
