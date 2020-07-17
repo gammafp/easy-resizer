@@ -1,16 +1,17 @@
 import React from 'react'
 import MenuComponent from './menu/Menu';
 import './EasyResizer.scss';
-import { AddButton } from './buttons/Buttons';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import 'animate.css';
+import ExportButton from './exportButton/ExportButton';
 
 // Import imagen
 import store, { AppState } from '../State/store';
 import { useSelector, useDispatch } from 'react-redux';
 import DragDropFiles from './dragDropFiles/DragDropFiles';
 import { activateContextMenu, closeContextMenu } from '../State/contextMenu';
+import { setScale } from '../State/scale';
 
 const SwapPalette = () => {
     const images = useSelector((state: AppState) => state.images);
@@ -64,10 +65,13 @@ const SwapPalette = () => {
                         <span className="scale-text">
                             Scale:&nbsp;
                         </span>
-                        <input type="number" defaultValue="1" min="0" max="20" className="input-scale" />
+                        <input type="number" defaultValue="1" min="0" max="20" className="input-scale" onChange={(event) => {
+                            dispatch(setScale( Number(event.target.value) ));
+                            console.log('cambio: ', event.target.value);
+                        }}/>
                     </div>
                     <div className="mr-5">
-                        <AddButton className="p-2" style={{ fontSize: '1.3rem' }}>Re-scale</AddButton>
+                       <ExportButton />
                     </div>
                 </div>
             </div>

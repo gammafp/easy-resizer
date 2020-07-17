@@ -2,7 +2,7 @@ import { createAction } from '@reduxjs/toolkit';
 import { ImagesType } from './images';
 import { contextMenuType } from './contextMenu';
 
-export const defaultZoomState = 100;
+export const defaultScaleState = 1;
 export const defaultColors = [];
 export const defaultImages:ImagesType = [];
 export const defaultContextMenuData: contextMenuType = {

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import zoomReducer from './zoom';
+import scale from './scale';
 import images from './images';
 import contextMenu from './contextMenu';
 
 export const rootReducer = combineReducers({
-    zoom: zoomReducer,
+    scale,
     images,
     contextMenu
 });
