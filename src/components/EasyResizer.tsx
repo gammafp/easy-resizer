@@ -3,7 +3,9 @@ import MenuComponent from './menu/Menu';
 import './EasyResizer.scss';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
+
 import 'animate.css';
+
 import ExportButton from './exportButton/ExportButton';
 
 // Import imagen
@@ -43,7 +45,7 @@ const SwapPalette = () => {
                             {
                                 images.map((image) => {
                                     return (
-                                        <div className="image-container animated" key={image.id} id={`id_${image.id}`} onContextMenu={(event) => contextMenuHandle(event, image.id)}>
+                                        <div className="image-container animate__animated animate__bounceIn" key={image.id} id={`id_${image.id}`} onContextMenu={(event) => contextMenuHandle(event, image.id)}>
                                             <div className="figure">
                                                 <img src={image.src} alt="Imagen Muestra" />
                                                 <figcaption>

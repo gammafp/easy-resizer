@@ -34,7 +34,6 @@ const ContextMenu = (props: any) => {
 
     const handleClickDelete = () => {
         const image = document.querySelector('#id_' + sideMenuContext.id) as HTMLDivElement;
-        image.classList.add('animate__animated');
         image.classList.add('animate__zoomOut');
 
         setTimeout(() => {
