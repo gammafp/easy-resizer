@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MenuComponent from './menu/Menu';
 import './EasyResizer.scss';
 import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -15,9 +15,12 @@ import DragDropFiles from './dragDropFiles/DragDropFiles';
 import { activateContextMenu, closeContextMenu } from '../State/contextMenu';
 import { setScale } from '../State/scale';
 
+
 const SwapPalette = () => {
     const images = useSelector((state: AppState) => state.images);
+    const [localScale, setLocalScale] = useState(1);
     const dispatch = useDispatch();
+
     const contextMenuHandle = (event: React.MouseEvent<HTMLDivElement, MouseEvent>, id: string) => {
         dispatch(
             activateContextMenu({
@@ -67,9 +70,10 @@ const SwapPalette = () => {
                         <span className="scale-text">
                             Scale:&nbsp;
                         </span>
-                        <input type="number" defaultValue="1" min="0" max="20" className="input-scale" onChange={(event) => {
-                            dispatch(setScale( Number(event.target.value) ));
-                            console.log('cambio: ', event.target.value);
+                        <input type="number" value={localScale} min="0" max="20"  className="input-scale" onChange={(event) => {
+                            const scaleValue = (Number(event.target.value) > 0) ? Number(event.target.value) : 0.1; 
+                            setLocalScale(scaleValue);
+                            dispatch(setScale( scaleValue ));
                         }}/>
                     </div>
                     <div className="mr-5">

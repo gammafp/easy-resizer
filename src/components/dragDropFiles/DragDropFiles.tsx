@@ -23,7 +23,6 @@ const DragDropFiles = (props: any) => {
         const images = await getImageFiles(files) as ImagesType;
         dispatch(setImages(images));
         dragBox.current?.classList.remove('drag-drop-box-over');
-        console.log(event);
     };
 
     return (

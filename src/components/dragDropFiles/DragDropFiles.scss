@@ -2,9 +2,10 @@
     background-color: var(--main-bg-hover);
 }
 
-.drag-drop-box {
-    height: calc(inherit - 50px);
-}
+// .drag-drop-box {
+    // $tam: inherit;
+    // height: calc($tam - 50px);
+// }
 .drag-drop-box-notification {
     border: 2px solid white;
     border-radius: 5px;

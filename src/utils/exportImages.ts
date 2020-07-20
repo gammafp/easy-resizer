@@ -72,7 +72,6 @@ class GetImages extends Phaser.Scene {
         this.options_atlas = options;
     }
     preload() {
-        console.log('atlas: ', this.options_atlas.json)
         this.load.atlas('my_atlas', URL.createObjectURL(b64toBlob(this.options_atlas.src)), URL.createObjectURL(new Blob([this.options_atlas.json])));
         this.load.start();
 
@@ -85,7 +84,6 @@ class GetImages extends Phaser.Scene {
                     src: textureB64,
                 };
             }).filter((obj) => obj.name !== '__BASE');
-            // TODO: Regresar esto: output
             this.registry.events.emit(LOCAL_EVENTS.EXPORT_IMAGES_COMPLETE, output);
         });
     }
