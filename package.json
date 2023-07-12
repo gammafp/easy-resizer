@@ -18,7 +18,7 @@
     "animate.css": "^4.1.0",
     "file-saver": "^2.0.2",
     "glamor": "^2.20.40",
-    "jszip": "^3.4.0",
+    "jszip": "^3.8.0",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "phaser": "^3.23.0",
